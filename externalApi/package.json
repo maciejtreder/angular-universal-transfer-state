@@ -1,0 +1,12 @@
+{
+  "name": "angular-universal-transfer-state",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node externalApi.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {}
+}
