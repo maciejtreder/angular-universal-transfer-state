@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { CustomService } from '../custom.service';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
- selector: 'app-slow',
- template: `
-   <p>
-     Response is: {{response | async | json}}
-   </p>
- `,
- styles: []
+selector: 'app-slow',
+template: `
+  <p>
+    Response is: {{response | json}}
+  </p>
+`,
+styles: []
 })
 export class SlowComponent {
 
- public response: Observable<any> = this.service.getSlow();
- constructor(private service: CustomService) {}
+public response: any = this.router.snapshot.data.response;
+constructor(private router: ActivatedRoute) {}
 }
